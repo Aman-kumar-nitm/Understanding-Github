@@ -33,3 +33,4 @@
 #### Changed something committed locally now don't want that commit in history and want to move back to prev commit like current a->b->c we want to delete c completely and roll back to b 
 #### git reset git reset --hard HEAD~1 => this command can destroy uncommitted work
 
+now want to push something and then revert that changes
