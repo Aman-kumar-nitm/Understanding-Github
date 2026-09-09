@@ -11,3 +11,8 @@
 
 ##### Understanding git diff => What have I changed in my working tree that I have NOT staged yet (compare stage with current working dir) 
 ##### git diff --staged  => What have I staged that is different from my last commit (compare stage with last commit)
+
+
+## Understanding git merge <branch-name> and git cherry-pick <commit-C>
+##### In local we have two branch main and feature/login => Currently both are at same step => git checkout feature/login => Do some changes => Stage it and commit it Dont Push => Now git checkout main => as expected it wont have those changes and even remote repo does not have it => to bring it in main two option 1. Push those changes from /feature/login to remote repo then pull it in main 2. git merge feature/login 
+##### Lets say feature/login locally has two commit c and d and inside main we want only upto c not d => git cherry-pick <commit-C>
