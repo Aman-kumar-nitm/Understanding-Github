@@ -65,4 +65,4 @@ doing some commit to just see status
 backup2 first commit 
 Creating some merge conflict bw backup1 and backup2
 
-Hey hi to check just behaviour of upstream in .git/config
+Hey hi to check just behaviour of upstream in .git/config => Hey hi replied from Github feature/login repo
