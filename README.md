@@ -36,3 +36,24 @@
 ### git revert
 #### lets say change something push it to remote(main) now a->b->c where c is changed push to remote(main) => we want that this commit is not right but as we pushed we cannot remove it so we can prepare a new commit by reversing all the changes made in c means we are going back to b (same content) and want to push this again as new commit R
 #### git revert b3eb4a7d1e32ec43953a14159b529fbad37a393e and then git push origin feature/login:main it will be like a->b->c->r and r will be as same as b
+
+### Creating Branch
+##### git branch <branch-name>
+##### git switch <branch-name>
+##### git switch -c feature/login
+##### git checkout <branch-name>  it does two thing switch the branch along with restore files as git restore (take staged back into changed and changed to last staged/committed)
+
+
+## Git merge
+##### Fast Forward Merge => No new merge commit is required. Main is there a->b->c and feature/login has few changes on top of it a->b->c->d->e so inside main we can do git merge feature/login and it will be a->b->c->d->e and both main and feature/login will be pointing here
+
+##### Diverged Branches Merge 
+a->b->c
+        /   \
+        d   e
+        f   g
+    Now when we merge it will create one new commit 
+    f g
+    \ /
+     h
+     
