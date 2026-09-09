@@ -33,3 +33,6 @@
 #### Changed something committed locally now don't want that commit in history and want to move back to prev commit like current a->b->c we want to delete c completely and roll back to b 
 #### git reset git reset --hard HEAD~1 => this command can destroy uncommitted work
 
+### git revert
+#### lets say change something push it to remote(main) now a->b->c where c is changed push to remote(main) => we want that this commit is not right but as we pushed we cannot remove it so we can prepare a new commit by reversing all the changes made in c means we are going back to b (same content) and want to push this again as new commit R
+#### git revert b3eb4a7d1e32ec43953a14159b529fbad37a393e and then git push origin feature/login:main it will be like a->b->c->r and r will be as same as b
