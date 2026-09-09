@@ -71,3 +71,29 @@ a->b->c
 
 ## Understanding Remote
 ##### So what happen there is one remote main and one local main and our .git (locally) keep one remote main as named origin/main which stores status of our remote main seen last time. sometime our github main gets committed so many times by other developer and we don't know even our local .git does not know to let .git know what is state on remote main we run <git fetch origin> fetch says: "Go to the remote and tell me what changed. Download the new Git data, but don't modify my current branch." 
+
+### Example what i did i edited readme from github so that our local wont know that remote main has some commits then 
+D:\Github_Understanding>git switch main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+D:\Github_Understanding>git fetch origin     
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.25 KiB | 63.00 KiB/s, done.
+From https://github.com/Aman-kumar-nitm/Understanding-Github
+   06fec92..c8986f6  main       -> origin/main
+
+D:\Github_Understanding>git status
+On branch main
+Your branch is behind 'origin/main' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+D:\Github_Understanding>
+
+#### See Here first local remote main only knew 3 commits our local main is behind but then git fetch origin told no there is one more commit that is staying on remote main 
