@@ -69,3 +69,7 @@ a->b->c
 
 ## Understanding Remote
 ##### So what happen there is one remote main and one local main and our .git (locally) keep one remote main as named origin/main which stores status of our remote main seen last time. sometime our github main gets committed so many times by other developer and we don't know even our local .git does not know to let .git know what is state on remote main we run <git fetch origin> fetch says: "Go to the remote and tell me what changed. Download the new Git data, but don't modify my current branch." 
+
+
+#### Writing this for only compare remote main content and my main content without merging it how clearly understand here 
+#### some changes stays on remote main that we don't know now git fetch origin helps us to know these changes without merging it or pulling it to our local main so we can use <git log main..origin/main> to compare changes bw my local main and remote repo main.
