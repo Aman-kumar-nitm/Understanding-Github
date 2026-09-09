@@ -19,3 +19,41 @@
 
 
 ###### This one is just to See Cherry pick as another commit this e3e199ff4ad4c1052fed32f2596c4ca6e29f5573 and this 0f8d0e1d14bd1f20653e1ce5b5fdab1019cff922 is commit id used while cherry pick git cherry pick e3e199ff4ad4c1052fed32f2596c4ca6e29f5573
+
+
+#### git log helps to see commits and git show <commit-id> helps to see changes 
+#### git blame somefile.js helps to see who made changes in that file then we can use git show <commit-id> to investigate more
+
+## Undoing Things
+### git restore 
+#### git restore <file-name> this will turn the file into staged state
+#### git restore --staged <file-name> this will bring back file from staged to unchanged 
+
+### git reset
+#### Changed something committed locally now don't want that commit in history and want to move back to prev commit like current a->b->c we want to delete c completely and roll back to b 
+#### git reset git reset --hard HEAD~1 => this command can destroy uncommitted work
+
+### git revert
+#### lets say change something push it to remote(main) now a->b->c where c is changed push to remote(main) => we want that this commit is not right but as we pushed we cannot remove it so we can prepare a new commit by reversing all the changes made in c means we are going back to b (same content) and want to push this again as new commit R
+#### git revert b3eb4a7d1e32ec43953a14159b529fbad37a393e and then git push origin feature/login:main it will be like a->b->c->r and r will be as same as b
+
+### Creating Branch
+##### git branch <branch-name>
+##### git switch <branch-name>
+##### git switch -c feature/login
+##### git checkout <branch-name>  it does two thing switch the branch along with restore files as git restore (take staged back into changed and changed to last staged/committed)
+
+
+## Git merge
+##### Fast Forward Merge => No new merge commit is required. Main is there a->b->c and feature/login has few changes on top of it a->b->c->d->e so inside main we can do git merge feature/login and it will be a->b->c->d->e and both main and feature/login will be pointing here
+
+##### Diverged Branches Merge 
+a->b->c
+        /   \
+        d   e
+        f   g
+    Now when we merge it will create one new commit 
+    f g
+    \ /
+     h
+     
