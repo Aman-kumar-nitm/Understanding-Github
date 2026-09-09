@@ -150,3 +150,29 @@ Fast-forward
 
 ## upstream Tracking
 #### after creating and switching to feature/login while pushing we do <git push -u origin feature/login> then what it does it lets git to remember from our local feature/login to push remote feature/login 
+### One amazing learning exercise for understanding this first of all upstream info is inside .git/config
+##### create one new branch => switch to it 
+D:\Github_Understanding>git switch aman
+Switched to branch 'aman'
+##### next this one mainly add remote origin information 
+D:\Github_Understanding>git pull origin feature/login
+From https://github.com/Aman-kumar-nitm/Understanding-Github
+ * branch            feature/login -> FETCH_HEAD
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+#### then do some changes commit it and while pushing 
+D:\Github_Understanding>git push -u origin aman:feature/login
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 581 bytes | 290.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Aman-kumar-nitm/Understanding-Github.git
+   078653b..ee43f7a  aman -> feature/login
+branch 'aman' set up to track 'origin/feature/login'.
+
+#### here now aman is setting track of origin/feature/login 
+#### so next time git pull , git fetch and git push will refer this branch if not explicitly mentioned.
