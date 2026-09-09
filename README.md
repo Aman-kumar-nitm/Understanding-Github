@@ -57,3 +57,7 @@ a->b->c
     \ /
      h
      
+
+#### git merge --abort while resolving commit before committing it will turn into going previous commit
+#### Lets say merge has happened If it hasn't been pushed and you're comfortable rewriting your local history: git reset --hard HEAD~1
+#### If the merge was already pushed/shared git revert -m 1 <merge-commit-id>  => it says create a commit that undoes the changes brought into main by this merge.
