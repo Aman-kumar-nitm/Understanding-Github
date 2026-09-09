@@ -73,3 +73,43 @@ a->b->c
 
 #### Writing this for only compare remote main content and my main content without merging it how clearly understand here 
 #### some changes stays on remote main that we don't know now git fetch origin helps us to know these changes without merging it or pulling it to our local main so we can use <git log main..origin/main> to compare changes bw my local main and remote repo main.
+
+
+D:\Github_Understanding>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+D:\Github_Understanding>git fetch origin
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.20 KiB | 72.00 KiB/s, done.
+From https://github.com/Aman-kumar-nitm/Understanding-Github
+   c8986f6..6b97b63  main       -> origin/main
+
+D:\Github_Understanding>git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+D:\Github_Understanding>git log main..origin/main
+commit 6b97b6375a171ce6bbd95453d2eacd32fd4173d0 (origin/main)
+Author: AMAN KUMAR <amankumarec2023nitm@gmail.com>
+Date:   Wed Sep 9 22:08:33 2026 +0530
+
+    Enhance README with explanation of git fetch
+    
+    Clarify the use of 'git fetch origin' and how it helps compare local and remote branches without merging.
+
+D:\Github_Understanding>git pull origin main
+From https://github.com/Aman-kumar-nitm/Understanding-Github
+ * branch            main       -> FETCH_HEAD
+Updating c8986f6..6b97b63
+Fast-forward
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
