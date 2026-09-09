@@ -61,3 +61,8 @@ a->b->c
 #### git merge --abort while resolving commit before committing it will turn into going previous commit
 #### Lets say merge has happened If it hasn't been pushed and you're comfortable rewriting your local history: git reset --hard HEAD~1 => will move your head to last commit top of which merging started
 #### If the merge was already pushed/shared git revert -m 1 <merge-commit-id>  => it says create a commit that undoes the changes brought into main by this merge.
+##### what done is 
+##### 1. create one backup1 branch then write some thing and commit similarly create backup2 branch write something and commit 
+##### 3. in backup1 git merge backup2 create one merge conflict try to solve in editor don't commit => if run git merge --abort will throw you back to code as backup1 had
+##### 4. if committed and ran git reset --hard HEAD~1 inside backup1 will throw you back to last commit of backup1 backup2 wont know this is merged
+##### 5. if merged and committed and pushed then inside backup1 git revert -m 1 <merge-commit-id> will result into creation of one new commit with content as last commit before merging backup1 
