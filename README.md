@@ -59,4 +59,5 @@ a->b->c
      
 
 doing some commit to just see status 
-second commit from backup1
+backup2 first commit 
+second commit from backup1 and Hello from merge Editor
