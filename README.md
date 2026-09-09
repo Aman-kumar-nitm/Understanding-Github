@@ -58,6 +58,9 @@ a->b->c
      h
      
 
+
+
+Lets Create one Merge conflict in backup1 & backup2
 doing some commit to just see status 
 backup2 first commit 
 Creating some merge conflict bw backup1 and backup2
