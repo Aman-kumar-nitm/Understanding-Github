@@ -58,6 +58,6 @@ a->b->c
      h
      
 
-doing some commit to just see status 
-backup2 first commit 
-second commit from backup1 and Hello from merge Editor
+
+
+Lets Create one Merge conflict in backup1 & backup2
