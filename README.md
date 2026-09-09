@@ -4,3 +4,6 @@
 ### git push <remote> <local-branch>:<remote-branch>
 #### git push origin main:feature/login
 #### git pull origin main
+
+##### Hi checking git diff
+##### You cannot git checkout feature/login before staging all of your changes no changes added to commit (use "git add" and/or "git commit -a")
