@@ -25,3 +25,6 @@
 #### git blame somefile.js helps to see who made changes in that file then we can use git show <commit-id> to investigate more
 
 ## Undoing Things
+### git restore 
+#### git restore <file-name> this will turn the file into staged state
+#### git restore --staged <file-name> this will bring back file from staged to unchanged 
