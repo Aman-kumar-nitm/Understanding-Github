@@ -9,4 +9,5 @@
 ##### You cannot git checkout feature/login before staging all of your changes no changes added to commit (use "git add" and/or "git commit -a")
 
 
-##### Understanding git diff => shows diff bw code currently in working dir and last commit and git diff --staged  shows diff bw code in staging and last commit 
+##### Understanding git diff => What have I changed in my working tree that I have NOT staged yet (compare stage with current working dir) 
+##### git diff --staged  => What have I staged that is different from my last commit (compare stage with last commit)
