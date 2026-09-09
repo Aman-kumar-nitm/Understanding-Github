@@ -28,3 +28,8 @@
 ### git restore 
 #### git restore <file-name> this will turn the file into staged state
 #### git restore --staged <file-name> this will bring back file from staged to unchanged 
+
+### git reset
+#### Changed something committed locally now don't want that commit in history and want to move back to prev commit like current a->b->c we want to delete c completely and roll back to b 
+#### git reset git reset --hard HEAD~1 => this command can destroy uncommitted work
+
