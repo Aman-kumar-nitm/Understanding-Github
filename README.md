@@ -138,3 +138,15 @@ Updating c8986f6..6b97b63
 Fast-forward
  README.md | 4 ++++
  1 file changed, 4 insertions(+)
+
+
+
+## Understanding Pull , Merge , Rebase because we in depth Understood fetch
+### pull=fetch + integrate those changes
+#### git fetch=> Tell me what changed remotely and update my remote-tracking information.
+#### git pull=> Get the remote changes and integrate them into my current branch.
+#### git push origin feature/login:main => take my local feature/login code and push it to remote main
+
+
+## upstream Tracking
+#### after creating and switching to feature/login while pushing we do <git push -u origin feature/login> then what it does it lets git to remember from our local feature/login to push remote feature/login 
