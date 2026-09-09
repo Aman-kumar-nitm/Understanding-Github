@@ -60,3 +60,4 @@ a->b->c
 
 doing some commit to just see status 
 backup2 first commit 
+Creating some merge conflict bw backup1 and backup2
