@@ -66,3 +66,6 @@ a->b->c
 ##### 3. in backup1 git merge backup2 create one merge conflict try to solve in editor don't commit => if run git merge --abort will throw you back to code as backup1 had
 ##### 4. if committed and ran git reset --hard HEAD~1 inside backup1 will throw you back to last commit of backup1 backup2 wont know this is merged
 ##### 5. if merged and committed and pushed then inside backup1 git revert -m 1 <merge-commit-id> will result into creation of one new commit with content as last commit before merging backup1 
+
+## Understanding Remote
+##### So what happen there is one remote main and one local main and our .git (locally) keep one remote main as named origin/main which stores status of our remote main seen last time. sometime our github main gets committed so many times by other developer and we don't know even our local .git does not know to let .git know what is state on remote main we run <git fetch origin> fetch says: "Go to the remote and tell me what changed. Download the new Git data, but don't modify my current branch." 
