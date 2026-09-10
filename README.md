@@ -209,3 +209,26 @@ git branch -u origin/<branch-name>
 4. now if we do git switch feature/rebase then git rebase origin/main and before pushing let say some one has pushed one more commit to remote main so now remote main is a->b->c->d->e->f->i but our local rebased feature/rebase will be a->b->c->d->e->f->g'->h' and if we try to normal push it wont happen it will fail 
 5. we can do git push --force but it will create as same as our main (problem ) will destroy i from remote main and remote main will become a->b->c->d->e->f->g'->h'
 6. git push --force-with-lease it will see does remote main and local remote main is same if not it will fail saying we can't rebase it (useful and safe)
+
+
+## How workflow happens Very Important
+1. Issue comes 
+2. assigned to some developer 
+3. developer clone or pull current main from remote repo to start working git pull origin main inside local main
+4. git checkout -b feature/github-workflow
+5. does some changes commits it as per convinience
+6. push it to remote feature/github-workflow git push origin feature/github-workflow:github-workflow
+7. creates PR (from github-workflow-> main ) 
+PR shows what changed
+which commits were added
+which files changed
+who created it
+reviewers
+CI results
+comments
+approval status
+merge status
+8. Someone can review it and add some comment (while reviewing they check code is right , understandable , secure and all )
+9. if comment added we can start adding commits according to that and keep pushing code to that branch no need to create new PR that will show new changes
+10. Draft PR an opened PR but not completely done someone can see and suggest practices that needs to be followed once ready mark PR ready for review
+
