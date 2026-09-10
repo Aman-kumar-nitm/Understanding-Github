@@ -202,3 +202,10 @@ now before pushing we can do
 Setting up upstream for a branch 
 git branch -u origin/<branch-name>
 
+## Big Understanding Diff bw git push --force and git push --force-with-lease
+1. let say remote main is in state of a->b->c->d
+2. then you cloned => created a new branch feature/rebase => did some commit in bw someone has done some commits to remote main
+3. So now remote main a->b->c->d->e->f local remote main knows a->b->c->d and local feature/rebase a->b->c->d->g->h
+4. now if we do git switch feature/rebase then git rebase origin/main and before pushing let say some one has pushed one more commit to remote main so now remote main is a->b->c->d->e->f->i but our local rebased feature/rebase will be a->b->c->d->e->f->g'->h' and if we try to normal push it wont happen it will fail 
+5. we can do git push --force but it will create as same as our main (problem ) will destroy i from remote main and remote main will become a->b->c->d->e->f->g'->h'
+6. git push --force-with-lease it will see does remote main and local remote main is same if not it will fail saying we can't rebase it (useful and safe)
