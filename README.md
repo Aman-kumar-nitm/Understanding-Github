@@ -176,3 +176,7 @@ branch 'aman' set up to track 'origin/feature/login'.
 
 #### here now aman is setting track of origin/feature/login 
 #### so next time git pull , git fetch and git push will refer this branch if not explicitly mentioned.
+
+
+## Rebase : Rebase takes your commits and reapplies them on top of another commit.
+###### This commit is done from Github repo to provide feature of adding code by someone else.
