@@ -196,3 +196,9 @@ now before pushing we can do
 2. git switch main then do git pull origin main => after that come to feature/rebase and rebase main using git rebase main (it will do take your local main and on top of that place all feature/rebase commits) then we can push these codes 
 
 3. Most preferable git rebase origin/main take my changes and push it to on top of origin/main.
+4. if Merge conflict happens then resolve it => git add <file> => and run git rebase --continue 
+5. if want to abort in bw git rebase --abort 
+
+Setting up upstream for a branch 
+git branch -u origin/<branch-name>
+
