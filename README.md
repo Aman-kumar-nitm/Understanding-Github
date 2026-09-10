@@ -181,3 +181,18 @@ branch 'aman' set up to track 'origin/feature/login'.
 ## Rebase : Rebase takes your commits and reapplies them on top of another commit.
 ###### This commit is done from Github repo to provide feature of adding code by someone else.
 ##### Now This code is added from feature/rebase branch to see how rebase is happening.
+Understanding Rebase Clearly 
+Scenario we have started working cloned main created one new branch feature/rebase and start working committing but not pushing those changes
+In mean time some other developer are building and pushing changes to github main 
+Now what i want to push my change but then it should go with current changes that is done by other developers so what we do take our commits and put it on top of other developer code and then push it (very useful company scenario)
+How to replicate it 
+everything in sync 
+git branch feature/rebase
+git switch feature/rebase
+go to remote repo and do some changes and commit in main so that it looks like someone other developer has done it 
+now do some changes and commits in feature/rebase
+now before pushing we can do 
+1. pull main merge conflict everything with our changes then push it 
+2. git switch main then do git pull origin main => after that come to feature/rebase and rebase main using git rebase main (it will do take your local main and on top of that place all feature/rebase commits) then we can push these codes 
+
+3. Most preferable git rebase origin/main take my changes and push it to on top of origin/main.
